@@ -1,11 +1,11 @@
 abstract class Constants {
   static readonly HELP:string =
   `
-  <span style="font-weight: bold">Available commands:</span><br> 
+  <span style="font-weight: bold; color: #cd5909">Available commands:</span><br> 
   <span style="color: #0f0">about</span> - Who am I?<br> 
-  <span style="color: #0f0">education</span> - My education<br>
-  <span style="color: #0f0">skills</span> - My skills<br>
-  <span style="color: #0f0">resume</span> - A copy of my resume<br>
+  <span style="color: #0f0">education</span> - Where have I studied?<br>
+  <span style="color: #0f0">skills</span> - What am I good at?<br>
+  <span style="color: #0f0">resume</span> - Opens a copy of my resume<br>
   <span style="color: #0f0">email</span> - Lets chat!<br>
   <span style="color: #0f0">gui</span> - Displays normal portfolio website<br>
   <span style="color: #0f0">help</span> - This command!<br> 
@@ -13,9 +13,12 @@ abstract class Constants {
   `
   static readonly ABOUT:string = 
   `
+  <span style="font-weight: bold; color: #cd5909">Who am I?:</span><br>
+  <div style="text-align: justify; text-align: inter-word">
   Akshay is an innovative and results-driven software engineer with expertise in Java, Python, and cloud technologies. 
   He hs a proven track record in developing critical infrastructure and driving continuous improvement in fast-paced environments. 
   Alongside this he is an excellent collaborator with a passion for problem-solving and learning new technologies.
+  </div>
   `
   static readonly EDUCATION:string = 
   `
