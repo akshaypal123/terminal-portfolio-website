@@ -23,6 +23,7 @@ This project is a terminal-style portfolio website where visitors can navigate t
 - **HTML5**: Structure of the website.
 - **CSS3**: Styling and layout.
 - **TypeScript**: Interactive functionality and command handling.
+- **Vite.js**: Development and Build Tool
 
 ## Getting Started 🚀
 
@@ -34,8 +35,21 @@ This project is a terminal-style portfolio website where visitors can navigate t
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/terminal-portfolio.git
+   git clone https://github.com/akshaypal123/terminal-portfolio-website
 
 2. **Navigate to the Repository**:
     ```bash
-    cd terminal-portfolio
+    cd terminal-portfolio-website
+
+3. **Install Dependencies**:
+    ```bash
+    npm install
+
+4. **Start the Vite Server**:
+    ```bash
+    npm run dev 
+
+## Contact 📧
+
+- **Email**: example@example.com
+- **Website**: [Your GUI Portfolio URL]
