@@ -35,3 +35,7 @@ This project is a terminal-style portfolio website where visitors can navigate t
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/your-username/terminal-portfolio.git
+
+2. **Navigate to the Repository**:
+    ```bash
+    cd terminal-portfolio
