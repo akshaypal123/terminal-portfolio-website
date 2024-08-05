@@ -1,5 +1,5 @@
 abstract class Constants {
-  static readonly HELP:string =
+  static readonly HELP: string =
   `
   <span style="font-size: 18px; font-weight: bold; color: #cd5909">Available commands:</span><br/> 
   <span style="color: #0f0">about</span> - Who am I?<br/> 
@@ -10,8 +10,8 @@ abstract class Constants {
   <span style="color: #0f0">gui</span> - Displays normal portfolio website<br/>
   <span style="color: #0f0">help</span> - This command!<br/> 
   <span style="color: #0f0">clear</span> - Clears the screen
-  `
-  static readonly ABOUT:string = 
+  `;
+  static readonly ABOUT: string =
   `
   <span style="font-size: 18px; font-weight: bold; color: #cd5909">Who am I?:</span><br/>
   <div style="text-align: justify; text-align: inter-word">
@@ -19,14 +19,14 @@ abstract class Constants {
   He hs a proven track record in developing critical infrastructure and driving continuous improvement in fast-paced environments. 
   Alongside this he is an excellent collaborator with a passion for problem-solving and learning new technologies.
   </div>
-  `
-  static readonly EDUCATION:string = 
+  `;
+  static readonly EDUCATION: string =
   `
   <span style="font-size: 18px; font-weight: bold; color: #cd5909">Where have I studied?:</span><br/>
   MSc in Quantum Technology Applications and Management, Univerisity of Sussex, 2024 - present<br/>
   MEng in Engineering Science, University of Oxford, 2018 - 2022
-  `
-  static readonly SKILLS:string = 
+  `;
+  static readonly SKILLS: string =
   `
   <span style="font-size: 18px; font-weight: bold; color: #cd5909">What am I good at?:</span><br/>
   <span style="font-weight: bold">Programming Languages:</span> Java, Python, JavaScript, TypeScript, C# <br/>
@@ -35,9 +35,13 @@ abstract class Constants {
   <span style="font-weight: bold">Databases:</span> PostgreSQL, Elastic, Amazon Athena <br/>
   <span style="font-weight: bold">Cloud Platforms:</span> AWS <br/>
   <span style="font-weight: bold">Development Methodologies:</span> TDD, Agile, Scrum <br/>
+  `;
+  static readonly EMAIL: string = 
   `
-  static readonly RESUME_PATH:string = '../resume.pdf';
-  static readonly GUI_WEBSITE_URL:string = 'https://bbc.com';
+  Let's chat! You can email me at <a href=mailto:akshay.anu@gmail.com>akshay.anu@gmail.com</a>
+  `;
+  static readonly RESUME_PATH: string = '../resume.pdf';
+  static readonly GUI_WEBSITE_URL: string = 'https://bbc.com';
 }
 
 interface Commands {
@@ -48,92 +52,92 @@ document.addEventListener('DOMContentLoaded', () => {
   const output = document.getElementById('output') as HTMLDivElement;
 
   const commands: Commands = {
-      help: showHelp,
-      about: showAbout,
-      education: showEducation,
-      skills: showSkills,
-      resume: showResume,
-      email: showEmail,
-      gui: showGUI,
-      clear: clearScreen
+    help: showHelp,
+    about: showAbout,
+    education: showEducation,
+    skills: showSkills,
+    resume: showResume,
+    email: showEmail,
+    gui: showGUI,
+    clear: clearScreen
   };
 
   function createInputLine() {
-      const inputLine = document.createElement('div');
-      inputLine.classList.add('input-line');
+    const inputLine = document.createElement('div');
+    inputLine.classList.add('input-line');
 
-      const prompt = document.createElement('span');
-      prompt.textContent = 'visitor@akshaypal:~$';
+    const prompt = document.createElement('span');
+    prompt.textContent = 'visitor@akshaypal:~$';
 
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.classList.add('input');
-      input.addEventListener('keypress', handleKeyPress);
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.classList.add('input');
+    input.addEventListener('keypress', handleKeyPress);
 
-      inputLine.appendChild(prompt);
-      inputLine.appendChild(input);
-      output.appendChild(inputLine);
+    inputLine.appendChild(prompt);
+    inputLine.appendChild(input);
+    output.appendChild(inputLine);
 
-      input.focus();
+    input.focus();
   }
 
   function handleKeyPress(event: KeyboardEvent) {
-      if (event.key === 'Enter') {
-          const input = event.target as HTMLInputElement;
-          const command = input.value.trim().toLowerCase();
-          handleCommand(command);
-          input.setAttribute('readonly', 'true'); // Make the input readonly after submitting
-          (input.parentElement as HTMLDivElement).classList.add('readonly-line'); // Add a class to the input line
+    if (event.key === 'Enter') {
+      const input = event.target as HTMLInputElement;
+      const command = input.value.trim().toLowerCase();
+      handleCommand(command);
+      input.setAttribute('readonly', 'true'); // Make the input readonly after submitting
+      (input.parentElement as HTMLDivElement).classList.add('readonly-line'); // Add a class to the input line
 
-          createInputLine();
-      }
+      createInputLine();
+    }
   }
 
   function handleCommand(command: string) {
-      if (commands[command]) {
-          commands[command]();
-      } else {
-          printOutput(`Command not found: ${command}. Type 'help' for a list of commands`);
-      }
+    if (commands[command]) {
+      commands[command]();
+    } else {
+      printOutput(`Command not found: ${command}. Type 'help' for a list of commands`);
+    }
   }
 
   function printOutput(text: string) {
-      const p = document.createElement('p');
-      p.classList.add('output-line');
-      p.innerHTML = text;
-      output.appendChild(p);
+    const p = document.createElement('p');
+    p.classList.add('output-line');
+    p.innerHTML = text;
+    output.appendChild(p);
   }
 
   function showHelp() {
-      printOutput(Constants.HELP);
+    printOutput(Constants.HELP);
   }
 
   function showAbout() {
-      printOutput(Constants.ABOUT);
+    printOutput(Constants.ABOUT);
   }
 
   function showEducation() {
-      printOutput(Constants.EDUCATION);
+    printOutput(Constants.EDUCATION);
   }
 
   function showSkills() {
-      printOutput(Constants.SKILLS);
+    printOutput(Constants.SKILLS);
   }
 
   function showResume() {
-      window.open(Constants.RESUME_PATH, '_blank');
+    window.open(Constants.RESUME_PATH, '_blank');
   }
 
   function showEmail() {
-      window.open('mailto:akshay.anu@gmail.com')
+    printOutput(Constants.EMAIL);
   }
 
   function showGUI() {
-      window.open(Constants.GUI_WEBSITE_URL, '_blank');
+    window.open(Constants.GUI_WEBSITE_URL, '_blank');
   }
 
   function clearScreen() {
-      output.innerHTML = '';
+    output.innerHTML = '';
   }
 
   // Initialize the first input line
