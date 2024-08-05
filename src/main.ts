@@ -133,7 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showGUI() {
-    window.open(Constants.GUI_WEBSITE_URL, '_blank');
+    printOutput("I am still currently developing my GUI website! For now please learn more about my experiences on this page")
+    // window.open(Constants.GUI_WEBSITE_URL, '_blank');
   }
 
   function clearScreen() {
