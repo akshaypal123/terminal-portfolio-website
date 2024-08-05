@@ -1,19 +1,19 @@
 abstract class Constants {
   static readonly HELP:string =
   `
-  <span style="font-weight: bold; color: #cd5909">Available commands:</span><br> 
-  <span style="color: #0f0">about</span> - Who am I?<br> 
-  <span style="color: #0f0">education</span> - Where have I studied?<br>
-  <span style="color: #0f0">skills</span> - What am I good at?<br>
-  <span style="color: #0f0">resume</span> - Opens a copy of my resume<br>
-  <span style="color: #0f0">email</span> - Lets chat!<br>
-  <span style="color: #0f0">gui</span> - Displays normal portfolio website<br>
-  <span style="color: #0f0">help</span> - This command!<br> 
+  <span style="font-size: 18px; font-weight: bold; color: #cd5909">Available commands:</span><br/> 
+  <span style="color: #0f0">about</span> - Who am I?<br/> 
+  <span style="color: #0f0">education</span> - Where have I studied?<br/>
+  <span style="color: #0f0">skills</span> - What am I good at?<br/>
+  <span style="color: #0f0">resume</span> - Opens a copy of my resume<br/>
+  <span style="color: #0f0">email</span> - Lets chat!<br/>
+  <span style="color: #0f0">gui</span> - Displays normal portfolio website<br/>
+  <span style="color: #0f0">help</span> - This command!<br/> 
   <span style="color: #0f0">clear</span> - Clears the screen
   `
   static readonly ABOUT:string = 
   `
-  <span style="font-weight: bold; color: #cd5909">Who am I?:</span><br>
+  <span style="font-size: 18px; font-weight: bold; color: #cd5909">Who am I?:</span><br/>
   <div style="text-align: justify; text-align: inter-word">
   Akshay is an innovative and results-driven software engineer with expertise in Java, Python, and cloud technologies. 
   He hs a proven track record in developing critical infrastructure and driving continuous improvement in fast-paced environments. 
@@ -22,17 +22,19 @@ abstract class Constants {
   `
   static readonly EDUCATION:string = 
   `
-  MSc in Quantum Technology Applications and Management, Univerisity of Sussex, 2024 - present<br>
+  <span style="font-size: 18px; font-weight: bold; color: #cd5909">Where have I studied?:</span><br/>
+  MSc in Quantum Technology Applications and Management, Univerisity of Sussex, 2024 - present<br/>
   MEng in Engineering Science, University of Oxford, 2018 - 2022
   `
   static readonly SKILLS:string = 
   `
-  Programming Languages: Java, Python, JavaScript, TypeScript, C#
-  Frameworks and Libraries: React, Spring Boot
-  Tools and Technologies: Git, Linux, Kubernetes, Docker, Drone, Kafka, Jira, Confluence
-  Databases: PostgreSQL, Elastic, Amazon Athena
-  Cloud Platforms: AWS
-  Development Methodologies: TDD, Agile, Scrum
+  <span style="font-size: 18px; font-weight: bold; color: #cd5909">What am I good at?:</span><br/>
+  <span style="font-weight: bold">Programming Languages:</span> Java, Python, JavaScript, TypeScript, C# <br/>
+  <span style="font-weight: bold">Frameworks and Libraries:</span> React, Spring Boot <br/>
+  <span style="font-weight: bold">Tools and Technologies:</span> Git, Linux, Kubernetes, Docker, Drone, Kafka, Jira, Confluence <br/>
+  <span style="font-weight: bold">Databases:</span> PostgreSQL, Elastic, Amazon Athena <br/>
+  <span style="font-weight: bold">Cloud Platforms:</span> AWS <br/>
+  <span style="font-weight: bold">Development Methodologies:</span> TDD, Agile, Scrum <br/>
   `
   static readonly RESUME_PATH:string = '../resume.pdf';
   static readonly GUI_WEBSITE_URL:string = 'https://bbc.com';
@@ -115,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showSkills() {
-      printOutput('This is the skills section.');
+      printOutput(Constants.SKILLS);
   }
 
   function showResume() {
@@ -123,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showEmail() {
-      printOutput('Email me at: example@example.com');
+      window.open('mailto:akshay.anu@gmail.com')
   }
 
   function showGUI() {
