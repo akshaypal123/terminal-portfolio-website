@@ -1,3 +1,40 @@
+abstract class Constants {
+  static readonly HELP:string =
+  `
+  <span style="font-weight: bold">Available commands:</span><br> 
+  <span style="color: #0f0">about</span> - Who am I?<br> 
+  <span style="color: #0f0">education</span> - My education<br>
+  <span style="color: #0f0">skills</span> - My skills<br>
+  <span style="color: #0f0">resume</span> - A copy of my resume<br>
+  <span style="color: #0f0">email</span> - Lets chat!<br>
+  <span style="color: #0f0">gui</span> - Displays normal portfolio website<br>
+  <span style="color: #0f0">help</span> - This command!<br> 
+  <span style="color: #0f0">clear</span> - Clears the screen
+  `
+  static readonly ABOUT:string = 
+  `
+  Akshay is an innovative and results-driven software engineer with expertise in Java, Python, and cloud technologies. 
+  He hs a proven track record in developing critical infrastructure and driving continuous improvement in fast-paced environments. 
+  Alongside this he is an excellent collaborator with a passion for problem-solving and learning new technologies.
+  `
+  static readonly EDUCATION:string = 
+  `
+  MSc in Quantum Technology Applications and Management, Univerisity of Sussex, 2024 - present<br>
+  MEng in Engineering Science, University of Oxford, 2018 - 2022
+  `
+  static readonly SKILLS:string = 
+  `
+  Programming Languages: Java, Python, JavaScript, TypeScript, C#
+  Frameworks and Libraries: React, Spring Boot
+  Tools and Technologies: Git, Linux, Kubernetes, Docker, Drone, Kafka, Jira, Confluence
+  Databases: PostgreSQL, Elastic, Amazon Athena
+  Cloud Platforms: AWS
+  Development Methodologies: TDD, Agile, Scrum
+  `
+  static readonly RESUME_PATH:string = '../resume.pdf';
+  static readonly GUI_WEBSITE_URL:string = 'https://bbc.com';
+}
+
 interface Commands {
   [key: string]: () => void;
 }
@@ -51,27 +88,27 @@ document.addEventListener('DOMContentLoaded', () => {
       if (commands[command]) {
           commands[command]();
       } else {
-          printOutput(`Command not found: ${command}`);
+          printOutput(`Command not found: ${command}. Type 'help' for a list of commands`);
       }
   }
 
   function printOutput(text: string) {
       const p = document.createElement('p');
       p.classList.add('output-line');
-      p.textContent = text;
+      p.innerHTML = text;
       output.appendChild(p);
   }
 
   function showHelp() {
-      printOutput('Available commands: help, about, education, skills, resume, email, gui, clear');
+      printOutput(Constants.HELP);
   }
 
   function showAbout() {
-      printOutput('This is the about section.');
+      printOutput(Constants.ABOUT);
   }
 
   function showEducation() {
-      printOutput('This is the education section.');
+      printOutput(Constants.EDUCATION);
   }
 
   function showSkills() {
@@ -79,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showResume() {
-      window.open('path/to/your-resume.pdf', '_blank'); // Replace with the actual path to your resume PDF
+      window.open(Constants.RESUME_PATH, '_blank');
   }
 
   function showEmail() {
@@ -87,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showGUI() {
-      window.location.href = 'https://yourguifolio.com'; // Replace with the actual URL of your GUI portfolio
+      window.open(Constants.GUI_WEBSITE_URL, '_blank');
   }
 
   function clearScreen() {
