@@ -23,7 +23,7 @@ This project is a terminal-style portfolio website where visitors can navigate t
 - **HTML5**: Structure of the website.
 - **CSS3**: Styling and layout.
 - **TypeScript**: Interactive functionality and command handling.
-- **Vite.js**: Development and Build Tool
+- **Vite.js**: Development and build tool.
 
 ## Getting Started 🚀
 
