@@ -40,7 +40,7 @@ abstract class Constants {
     `
   Let's chat! You can email me at <a href=mailto:akshay.anu@gmail.com>akshay.anu@gmail.com</a>
   `;
-  static readonly RESUME_PATH: string = 'resume.pdf';
+  static readonly RESUME_PATH: string = 'https://akshaypal123.github.io/terminal-portfolio-website/public/resume.pdf';
   static readonly GUI_WEBSITE_URL: string = 'https://bbc.com';
 }
 
