@@ -66,7 +66,7 @@ Object.defineProperty(Constants, "RESUME_PATH", {
     enumerable: true,
     configurable: true,
     writable: true,
-    value: '../public/resume.pdf'
+    value: 'resume.pdf'
 });
 Object.defineProperty(Constants, "GUI_WEBSITE_URL", {
     enumerable: true,
