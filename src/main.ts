@@ -40,7 +40,7 @@ abstract class Constants {
     `
   Let's chat! You can email me at <a href=mailto:akshay.anu@gmail.com>akshay.anu@gmail.com</a>
   `;
-  static readonly RESUME_PATH: string = 'https://1drv.ms/b/s!AiISxQfw7jnKgeIszW13hdU66LKDnw';
+  static readonly RESUME_PATH: string = '/../public/resume.pdf';
   static readonly GUI_WEBSITE_URL: string = 'https://bbc.com';
 }
 

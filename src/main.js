@@ -66,7 +66,7 @@ Object.defineProperty(Constants, "RESUME_PATH", {
     enumerable: true,
     configurable: true,
     writable: true,
-    value: 'https://1drv.ms/b/s!AiISxQfw7jnKgeIszW13hdU66LKDnw'
+    value: '/../public/resume.pdf'
 });
 Object.defineProperty(Constants, "GUI_WEBSITE_URL", {
     enumerable: true,
