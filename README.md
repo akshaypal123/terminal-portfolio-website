@@ -51,5 +51,6 @@ This project is a terminal-style portfolio website where visitors can navigate t
 
 ## Contact 📧
 
-- **Email**: example@example.com
-- **Website**: [Your GUI Portfolio URL]
+- **Email**: akshay.anu@gmail.com
+
+[comment]: # (- **Website**: [Your GUI Portfolio URL])
