@@ -40,6 +40,7 @@ abstract class Constants {
   static readonly PROJECTS: string = 
   `
   <span style="font-size: 18px; font-weight: bold; color: #cd5909">What have I built?:</span><br/>
+  <br/>
   <span style="font-weight: bold">Bloch Sphere Visualisation:</span> I built an interactive visualisation of the Bloch sphere from quantum mechanics<br/>
   <span>View the webpage <a href=https://akshaypal123.github.io/react-bloch-sphere-visualisation/ target=_blank>here</a> and the GitHub repo <a href=https://github.com/akshaypal123/react-bloch-sphere-visualisation target=_blank>here</a><br/>
   <br/>
