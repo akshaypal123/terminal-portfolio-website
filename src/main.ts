@@ -5,6 +5,7 @@ abstract class Constants {
   <span style="color: #0f0">about</span> - Who am I?<br/> 
   <span style="color: #0f0">education</span> - Where have I studied?<br/>
   <span style="color: #0f0">skills</span> - What am I good at?<br/>
+  <span style="color: #0f0">projects</span> - What have I built?<br/>
   <span style="color: #0f0">resume</span> - Opens a copy of my resume<br/>
   <span style="color: #0f0">email</span> - Lets chat!<br/>
   <span style="color: #0f0">gui</span> - Displays normal portfolio website<br/>
@@ -36,6 +37,12 @@ abstract class Constants {
   <span style="font-weight: bold">Cloud Platforms:</span> AWS <br/>
   <span style="font-weight: bold">Development Methodologies:</span> TDD, Agile, Scrum <br/>
   `;
+  static readonly PROJECTS: string = 
+  `
+  <span style="font-size: 18px; font-weight: bold; color: #cd5909">What have I built?:</span><br/>
+  <span style="font-weight: bold">Bloch Sphere Visualisation:</span> I built an interactive visualisation of the Bloch sphere from quantum mechanics<br/>
+  <span>View the webpage <a href=https://akshaypal123.github.io/react-bloch-sphere-visualisation/ target=_blank>here</a> and the GitHub repo <a href=https://github.com/akshaypal123/react-bloch-sphere-visualisation target=_blank>here</a>
+  `;
   static readonly EMAIL: string =
     `
   Let's chat! You can email me at <a href=mailto:akshay.anu@gmail.com>akshay.anu@gmail.com</a>
@@ -44,18 +51,19 @@ abstract class Constants {
   static readonly GUI_WEBSITE_URL: string = 'https://bbc.com';
 }
 
-interface Commands {
+interface Command {
   [key: string]: () => void;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const output = document.getElementById('output') as HTMLDivElement;
 
-  const commands: Commands = {
+  const commands: Command = {
     help: showHelp,
     about: showAbout,
     education: showEducation,
     skills: showSkills,
+    projects: showProjects,
     resume: showResume,
     email: showEmail,
     gui: showGUI,
@@ -122,6 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showSkills() {
     printOutput(Constants.SKILLS);
+  }
+
+  function showProjects() {
+    printOutput(Constants.PROJECTS);
   }
 
   function showResume() {
