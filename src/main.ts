@@ -42,6 +42,7 @@ abstract class Constants {
   <span style="font-size: 18px; font-weight: bold; color: #cd5909">What have I built?:</span><br/>
   <span style="font-weight: bold">Bloch Sphere Visualisation:</span> I built an interactive visualisation of the Bloch sphere from quantum mechanics<br/>
   <span>View the webpage <a href=https://akshaypal123.github.io/react-bloch-sphere-visualisation/ target=_blank>here</a> and the GitHub repo <a href=https://github.com/akshaypal123/react-bloch-sphere-visualisation target=_blank>here</a><br/>
+  <br/>
   <span style="font-weight: bold">Quantum Random Number Generator:</span> I built a quantum random number generator in Python using Google's Cirq library<br/>
   <span>View the GitHub repo <a href=https://github.com/akshaypal123/python-quantum-random-number-generator target=_blank>here</a>
 
