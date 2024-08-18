@@ -53,7 +53,7 @@ abstract class Constants {
   Let's chat! You can email me at <a href=mailto:akshay.anu@gmail.com>akshay.anu@gmail.com</a>
   `;
   static readonly RESUME_PATH: string = './resume.pdf';
-  static readonly GUI_WEBSITE_URL: string = 'https://bbc.com';
+  static readonly GUI_WEBSITE_URL: string = 'https://akshaypal123.github.io/gui-portfolio-website/';
 }
 
 interface Command {
@@ -150,8 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showGUI() {
-    printOutput("I am still currently developing my GUI website! For now please learn more about my experiences on this page.");
-    // window.open(Constants.GUI_WEBSITE_URL, '_blank');
+    printOutput("Redirecting you to gui portfolio website...");
+    window.open(Constants.GUI_WEBSITE_URL, '_blank');
   }
 
   function clearScreen() {
