@@ -33,7 +33,7 @@ abstract class Constants {
   <span style="font-weight: bold">Programming Languages:</span> Java, Python, JavaScript, TypeScript, C# <br/>
   <span style="font-weight: bold">Frameworks and Libraries:</span> React, Spring Boot <br/>
   <span style="font-weight: bold">Tools and Technologies:</span> Git, Linux, Kubernetes, Docker, Drone, Kafka, Jira, Confluence <br/>
-  <span style="font-weight: bold">Databases:</span> PostgreSQL, Elastic, Amazon Athena <br/>
+  <span style="font-weight: bold">Databases:</span> PostgreSQL, Elastic, Amazon Athena, Neo4j <br/>
   <span style="font-weight: bold">Cloud Platforms:</span> AWS <br/>
   <span style="font-weight: bold">Development Methodologies:</span> TDD, Agile, Scrum <br/>
   `;
